@@ -34,13 +34,13 @@ sample-dataset() {
         echo "Sample Dataset already generated."
     else
         echo "Running 'lein generate-sample-dataset' to generate the sample dataset..."
-        lein generate-sample-dataset
+        ~/bin/lein generate-sample-dataset
     fi
 }
 
 uberjar() {
     echo "Running 'lein uberjar'..."
-    lein uberjar
+    ~/bin/lein uberjar
 }
 
 all() {

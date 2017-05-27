@@ -123,6 +123,12 @@ export const passwordReset = createThunkAction(PASSWORD_RESET, function(token, c
     };
 });
 
+//Authorization via Session
+var hash= window.location.hash.substr(1);
+if(hash !== '' && hash.indexOf("session_id") > 0){
+	document.cookie = "metabase.SESSION_ID=" + hash.replace(/_session_id/, '')+ ";domain="+window.location.hostname+";path=/";
+	window.open('/dashboards','_self');
+}
 
 // reducers
 
