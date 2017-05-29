@@ -21,7 +21,7 @@ export default class CacheTTLOptions extends Component {
 
         this.state = {
           isOpen: false,
-          cache_ttl: this.props.card.cache_ttl ? this.props.card.cache_ttl : 0
+          cache_ttl: (!this.props.card || !this.props.card.name) ? 0 : (this.props.card.cache_ttl ? this.props.card.cache_ttl : 0)
         };
 
         _.bindAll(this, "onSave", "onGoBack", "handleChangeCacheTTL", "handleSubmitCacheTTL");
