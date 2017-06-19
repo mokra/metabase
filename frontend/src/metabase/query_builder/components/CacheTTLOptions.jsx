@@ -98,7 +98,7 @@ export default class CacheTTLOptions extends Component {
         if(!settingValues['enable-query-caching']) return null;
         if(!card) return null;
         if(!card.name) return null;
-        
+
         const onClick = () => this.setState({isOpen: true});
 
         return (
